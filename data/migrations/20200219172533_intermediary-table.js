@@ -18,7 +18,7 @@ exports.up = function(knex) {
       .onUpdate('CASCADE')
       .onDelete('CASCADE');
 
-      tbl.integer('ingredient_quantity', 12)
+      tbl.float('ingredient_quantity')
 
     tbl.primary(['recipe_id', 'ingredients_id'])
   })
